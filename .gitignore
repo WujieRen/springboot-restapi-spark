@@ -26,7 +26,7 @@ hs_err_pid*
 .idea/
 *.iml
 
-*/target/
+**/target/
 
-*/node_modules/
-*/build/
+**/node_modules/
+**/build/
