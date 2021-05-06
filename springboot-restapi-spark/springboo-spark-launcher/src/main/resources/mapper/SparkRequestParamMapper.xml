@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rwj.springbootspark.dao.SparkRequestParamDao">
+
+    <select id="getAnlysExecuteParam" resultType="com.rwj.springbootspark.model.SparkRequestParam"
+            parameterType="java.lang.String"
+    >
+        SELECT '1' as task_id
+        ,tac.out_database as db_name
+        ,tac.out_table as table_name
+        ,tac.anlys_sql as hql
+        FROM t_anlys_config tac
+        <where>
+            <if test="id != null and id != ''">
+                tac.id = #{id}
+            </if>
+        </where>
+    </select>
+
+</mapper>
